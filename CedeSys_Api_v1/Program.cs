@@ -1,4 +1,5 @@
 using CedeSys_Api_v1.Configurations;
+using CedeSys_Api_v1.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,36 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// jwt
-builder.Services.Configure<JwtOptions>(
-    builder.Configuration.GetSection(JwtOptions.SectionName));
 
-
-// CORS
-builder.Services.Configure<CorsOptions>(
-    builder.Configuration.GetSection(CorsOptions.SectionName));
-
-
-//RATE LIMIT
-builder.Services.Configure<RateLimitOptions>(
-    builder.Configuration.GetSection(RateLimitOptions.SectionName));
-
-
-// AUTHENTICATION
-builder.Services.Configure<AuthenticationOptions>(
-    builder.Configuration.GetSection(AuthenticationOptions.SectionName));
-
-
-//COOKIES
-builder.Services.Configure<CookieeOptions>(
-    builder.Configuration.GetSection(CookieeOptions.SectionName));
-
-
-// SQL CONNECTION
-builder.Services.Configure<SqlServerOptions>(
-    builder.Configuration.GetSection(SqlServerOptions.SectionName));
+// registrar la configuracion que se encuenta el archivo extencion
+builder.Services.AddConfigurationOptions(builder.Configuration);
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
