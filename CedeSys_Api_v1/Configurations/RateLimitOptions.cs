@@ -2,7 +2,7 @@
 {
     public sealed class RateLimitOptions
     {
-        public const string SetionName = "RateLimit";
+        public const string SectionName = "RateLimit";
 
         public int PermitPerMinute { get; init; }
         public int WindowMinutes { get; init; }

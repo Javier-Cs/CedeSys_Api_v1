@@ -1,6 +1,6 @@
 ﻿namespace CedeSys_Api_v1.Configurations
 {
-    public sealed class CookiesOptions
+    public sealed class CookieeOptions
     {
         public const string SectionName = "Cookie";
 

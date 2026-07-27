@@ -1,6 +1,6 @@
 ﻿namespace CedeSys_Api_v1.Configurations
 {
-    public sealed class ConnectionSqlOptions
+    public sealed class SqlServerOptions
     {
         public const string SectionName = "ConnectionStrings";
 
