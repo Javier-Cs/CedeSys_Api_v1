@@ -24,7 +24,6 @@
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Middleware\" />
-    <Folder Include="Infraestructure\" />
     <Folder Include="Mapping\" />
     <Folder Include="Common\" />
     <Folder Include="Exceptions\" />
